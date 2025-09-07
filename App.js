@@ -79,12 +79,6 @@ export default function App() {
           <TouchableOpacity style={styles.sortButton} onPress={() => sortByQuantity("ASC")}>
             <Text style={styles.sortButtonText}>Menor Estoque</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.sortButton} onPress={() => sortByQuantity("DESC")}>
-            <Text style={styles.sortButtonText}>Maior Estoque</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.sortButton} onPress={loadProducts}>
-            <Text style={styles.sortButtonText}>Data Cadastro</Text>
-          </TouchableOpacity>
         </View>
         <ProductList products={products} onDeleteProduct={deleteProduct} />
       </View>

@@ -28,7 +28,6 @@ const ProductForm = ({ onAddProduct }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.icon}>➕</Text>
         <Text style={styles.title}>Adicionar Produto</Text>
       </View>
 
@@ -61,7 +60,6 @@ const ProductForm = ({ onAddProduct }) => {
           onPress={handleAddProduct}
           disabled={!isFormValid}
         >
-          <Text style={styles.buttonIcon}>➕</Text>
           <Text style={styles.buttonText}>Adicionar Produto</Text>
         </TouchableOpacity>
       </View>
