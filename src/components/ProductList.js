@@ -40,7 +40,6 @@ const ProductList = ({ products, onDeleteProduct, searchTerm }) => {
 
   const renderEmptyState = () => (
     <View style={styles.emptyContainer}>
-      <Text style={styles.emptyIcon}>📦</Text>
       <Text style={styles.emptyText}>{searchTerm ? "Nenhum produto encontrado" : "Nenhum produto cadastrado"}</Text>
     </View>
   )
