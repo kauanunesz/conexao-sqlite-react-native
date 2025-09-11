@@ -7,10 +7,8 @@ class DatabaseServiceClass {
 
   async initDatabase() {
     try {
-      // Abre ou cria o banco de dados
       this.db = await SQLite.openDatabaseAsync("products.db")
 
-      // Cria a tabela se não existir
       await this.db.execAsync(`
         CREATE TABLE IF NOT EXISTS products (
           id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,7 +18,6 @@ class DatabaseServiceClass {
         );
       `)
 
-      // Insere dados iniciais se a tabela estiver vazia
       const result = await this.db.getFirstAsync("SELECT COUNT(*) as count FROM products")
 
       if (result.count === 0) {
