@@ -26,13 +26,14 @@ export default function App() {
   }
 
   const loadProducts = async () => {
-    try {
-      const productList = await DatabaseService.getAllProducts()
-      setProducts(productList)
-    } catch (error) {
-      console.error("Erro ao carregar produtos:", error)
-    }
+  try {
+    const productList = await DatabaseService.getAllProducts()
+    setProducts(productList)
+  } catch (error) {
+    console.error("Erro ao carregar produtos:", error)
   }
+}
+
 
   const addProduct = async (name, quantity) => {
     try {
@@ -64,7 +65,7 @@ export default function App() {
   if (loading) {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.loadingContainer}>{/* Aqui você pode adicionar um loading spinner */}</View>
+        <View style={styles.loadingContainer}></View>
       </SafeAreaView>
     )
   }
@@ -76,6 +77,12 @@ export default function App() {
       <View style={styles.content}>
         <ProductForm onAddProduct={addProduct} />
         <View style={styles.sortButtons}>
+          <TouchableOpacity style={styles.sortButton} onPress={() => loadProducts ("ASC")}>
+            <Text style={styles.sortButtonText}>Inserções</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.sortButton} onPress={() => sortByQuantity("DESC")}>
+            <Text style={styles.sortButtonText}>Maior Estoque</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.sortButton} onPress={() => sortByQuantity("ASC")}>
             <Text style={styles.sortButtonText}>Menor Estoque</Text>
           </TouchableOpacity>

@@ -4,10 +4,8 @@
     "slug": "produtos-sqlite",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,21 +17,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.kauanunesz.produtossqlite"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-sqlite"
     ],
     "extra": {
       "eas": {
-        "projectId": "50572d09-a0b7-48e4-ba39-ede1dd63ae4e"
+        "projectId": "12ebf037-d930-427f-b255-b2296323f7a7"
       }
-    }
+    },
+    "owner": "kauanunesz"
   }
 }
